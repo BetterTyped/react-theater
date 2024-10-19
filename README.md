@@ -1,4 +1,4 @@
-# 🧩 React Lifecycle Hooks
+# React theater
 
 <p>
   <a href="https://bettertyped.com/">
@@ -29,7 +29,7 @@
 
 ## About
 
-React lifecycle turned into dev friendly and readable hooks
+Simple components and hooks for animating your applications on scroll
 
 ## Key Features
 
@@ -37,86 +37,18 @@ React lifecycle turned into dev friendly and readable hooks
 
 🚀 **Fast and light**
 
-💎 **No external dependencies**
-
-🪄 **Increases code readability**
-
 🎊 **SSR Support**
 
 ## Installation
 
 ```bash
-npm install --save @better-hooks/lifecycle
+npm install --save react-theater
 ```
 
 or
 
 ```bash
-yarn add @better-hooks/lifecycle
+yarn add react-theater
 ```
 
 ---
-
-## Examples
-
-```tsx
-import React from "react";
-import {
-  useDidMount,
-  useDidUpdate,
-  useWillUnmount,
-  useIsMounted,
-  useWillMount,
-  useForceUpdate,
-  useDidChange
-} from "@better-hooks/lifecycle";
-
-const MyComponent: React.FC = (props) => {
-  const [isOpen, setIsOpen] = React.useState(false)
-
-  // returns ref with the mounted boolean state
-  const mounted = useIsMounted()
-
-  // Method for the component rerendering
-  const forceUpdate = useForceUpdate()
-
-  // Called before mount
-  useWillMount(() => {
-    // ...
-  })
-
-  // Called on component mount
-  useDidMount(() => {
-    // ...
-  })
-
-  // Called when isOpen change
-  useDidUpdate(() => {
-    // ...
-  }, [isOpen])
-
-  // Called when isOpen change but also on mount
-  useDidUpdate(() => {
-    // ...
-  }, [isOpen], true)
-
-  // Called when dependencies change, we can inspect previous dependencies
-  useDidChange((prevProps) => {
-    if(prevProps[0].value !== props.value) {
-      // ...
-    }
-  }, [props], true)
-
-  // Called last
-  useWillUnmount(() => {
-    // ...
-  })
-
-
-  return (
-    // ...
-  )
-}
-
-```
-# react-theater
