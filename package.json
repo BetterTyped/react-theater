@@ -1,6 +1,6 @@
 {
-  "name": "react-theater",
-  "version": "0.0.0",
+  "name": "@react-theater/scroll",
+  "version": "0.0.1",
   "author": "prc5",
   "license": "MIT",
   "description": "React animations helpers",
